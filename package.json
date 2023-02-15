@@ -1,0 +1,38 @@
+{
+  "scripts": {
+    "dev": "npm run server",
+    "prod": "npm run build && npm run server:prod",
+    "start": "npm run server:prod",
+    "build": "vite build",
+    "server": "ts-node ./server/index.ts",
+    "server:prod": "cross-env NODE_ENV=production NODE_OPTIONS=--max_old_space_size=600 ts-node ./server/index.ts",
+    "localise": "node scripts/localise.js"
+  },
+  "dependencies": {
+    "@types/compression": "^1.7.2",
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.9",
+    "@unhead/ssr": "^1.0.21",
+    "@unhead/vue": "^1.0.21",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/compiler-sfc": "^3.2.33",
+    "@vue/server-renderer": "^3.2.33",
+    "compression": "^1.7.4",
+    "cross-env": "^7.0.3",
+    "express": "^4.18.1",
+    "sirv": "^2.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4",
+    "uuid": "^3.3.2",
+    "vite": "^4.0.3",
+    "vite-plugin-ssr": "^0.4.69",
+    "vue": "^3.2.33",
+    "vue-i18n": "9.3.0-beta.16",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^0.8.1"
+  },
+  "type": "module",
+  "packageManager": "yarn@3.4.1"
+}
